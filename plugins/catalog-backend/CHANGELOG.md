@@ -1,5 +1,35 @@
 # @backstage/plugin-catalog-backend
 
+## 0.13.7
+
+### Patch Changes
+
+- ce17a1693: Allow the catalog search collator to filter the entities that it indexes
+- dbb952787: Use `ScmIntegrationRegistry#resolveUrl` in the placeholder processors instead of a custom implementation.
+
+  If you manually instantiate the `PlaceholderProcessor` (you most probably don't), add the new required constructor parameter:
+
+  ```diff
+  + import { ScmIntegrations } from '@backstage/integration';
+    // ...
+  + const integrations = ScmIntegrations.fromConfig(config);
+    // ...
+    new PlaceholderProcessor({
+      resolvers: placeholderResolvers,
+      reader,
+  +   integrations,
+    });
+  ```
+
+  All custom `PlaceholderResolver` can use the new `resolveUrl` parameter to resolve relative URLs.
+
+- Updated dependencies
+  - @backstage/catalog-client@0.3.19
+  - @backstage/catalog-model@0.9.2
+  - @backstage/errors@0.1.2
+  - @backstage/backend-common@0.9.2
+  - @backstage/config@0.1.9
+
 ## 0.13.6
 
 ### Patch Changes

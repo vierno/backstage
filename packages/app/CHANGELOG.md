@@ -1,5 +1,19 @@
 # example-app
 
+## 0.2.45
+
+### Patch Changes
+
+- Updated dependencies
+  - @backstage/plugin-todo@0.1.9
+  - @backstage/core-components@0.4.1
+  - @backstage/catalog-model@0.9.2
+  - @backstage/plugin-home@0.3.0
+  - @backstage/plugin-scaffolder@0.11.3
+  - @backstage/plugin-org@0.3.22
+  - @backstage/plugin-search@0.4.10
+  - @backstage/cli@0.7.11
+
 ## 0.2.44
 
 ### Patch Changes
